@@ -69,4 +69,40 @@ void Item::loadById()
 
 void Item::createItem()
 {
+	std::cout << "\n=== Criar item ===\n";
+
+	std::cout << "1. Item ID\nDigite: ";
+	std::cin >> id;
+	std::cin.ignore();
+
+	std::cout << "2. Nome do item\nDigite: ";
+	std::getline(std::cin, name);
+
+	std::cout << "3. Tipo do item\nDigite: ";
+	std::getline(std::cin, type);
+
+	do
+	{
+		std::cout << "4. Quantidade\nDigite: ";
+		std::cin >> amount;
+		if (amount < 0)
+			std::cout << "Quantidade não pode ser negativa. Tente novamente.\n";
+	} while (amount < 0);
+
+	do
+	{
+		std::cout << "5. Quantidade máxima\nDigite: ";
+		std::cin >> maxAmount;
+		if (maxAmount <= 0)
+			std::cout << "Quantidade máxima deve ser maior que zero. Tente novamente.\n";
+		if (amount > maxAmount)
+			std::cout << "Quantidade não pode ser maior que o máximo. Tente novamente.\n";
+	} while (maxAmount <= 0 || amount > maxAmount);
+
+	std::cout << "6. Símbolo\nDigite: ";
+	std::cin >> std::ws >> symbol;
+
+	saveById();
+
+	std::cout << "\nItem salvo em: ../items/" << id << ".txt\n";
 }

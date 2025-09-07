@@ -73,8 +73,12 @@ int main()
 				switch (option)
 				{
 				case 1:
-					// Criar item
+				{
+					Item *item = new Item("", "", 0, 0);
+					item->createItem();
+					delete item;
 					break;
+				}
 				case 2:
 				{
 					break;

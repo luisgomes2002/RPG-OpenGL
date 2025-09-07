@@ -1,0 +1,6 @@
+water_bubble
+water bubble
+spell
+3
+5
+*
