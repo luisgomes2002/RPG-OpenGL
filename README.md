@@ -32,7 +32,7 @@ cmake ..
 cmake --build .
 
 # Run the program
-./chess
+./game
 ```
 
 ## 🪟 Windows
@@ -53,5 +53,5 @@ cmake .. -G "MinGW Makefiles"
 cmake --build .
 
 # Run the program
-./chess.exe
+./game.exe
 ```
