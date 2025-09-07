@@ -19,7 +19,7 @@ Below are instructions for compiling and running on **Linux** and **Windows.**
 
 ```bash
 # Clone the project (if you haven't already)
-git clone https://github.com/luisgomes2002/Chess-OpenGL.git
+git clone https://github.com/luisgomes2002/RPG-OpenGL.git
 cd projeto
 
 # Create build folder
@@ -39,7 +39,7 @@ cmake --build .
 
 ```bash
 # Clone the project
-git clone https://github.com/luisgomes2002/Chess-OpenGL.git
+git clone https://github.com/luisgomes2002/RPG-OpenGL.git
 cd projeto
 
 # Create build folder
