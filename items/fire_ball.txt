@@ -1,0 +1,6 @@
+fire_ball
+Fire Ball
+Spell
+1
+5
+*
