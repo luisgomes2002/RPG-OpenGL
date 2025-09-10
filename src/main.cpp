@@ -1,9 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <unistd.h>
-#include <termios.h>
 
+#include "Getch.h"
 #include "Item.h"
 #include "Chest.h"
 #include "Map.h"
@@ -17,23 +16,6 @@ void showMenu()
 	std::cout << "3. Remover item\n";
 	std::cout << "0. Sair\n";
 	std::cout << "Escolha: ";
-}
-
-char getch()
-{
-	struct termios oldt, newt;
-	char ch;
-
-	tcgetattr(STDIN_FILENO, &oldt);
-	newt = oldt;
-
-	newt.c_lflag &= ~(ICANON | ECHO);
-	tcsetattr(STDIN_FILENO, TCSANOW, &newt);
-
-	ch = getchar();
-
-	tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-	return ch;
 }
 
 int main()

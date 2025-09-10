@@ -2,7 +2,7 @@
 #define PLAYER_H
 
 #include <iostream>
-#include <termios.h>
+#include "Getch.h"
 #include <unistd.h>
 #include <vector>
 
